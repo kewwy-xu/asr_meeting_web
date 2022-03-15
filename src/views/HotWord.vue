@@ -1,12 +1,12 @@
 <template>
-  <div id="home">
+  <div id="hotWord">
     
   </div>
 </template>
 
 <script>
 export default {
-  name: "Home",
+  name: "HotWord",
   components: {
     
   },

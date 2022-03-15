@@ -1,8 +1,8 @@
 <template>
   <div class="header">
-    <!--Í¼±ê-->
+    <!--å›¾æ ‡-->
     <div class="header-logo" @click="goHome">
-      <img src="../assets/logo-erduo.svg" alt="ÖÇ»á logo" >
+      <img src="../assets/logo-erduo.svg" alt="æ™ºä¼š logo" >
       <span>{{ webName }}</span>
     </div>
     
@@ -14,12 +14,12 @@ export default {
   name: "Header",
   data: function () {
     return {
-      webName: 'ÖÇ»á',
+      webName: 'æ™ºä¼š',
       navBarList: [
-        {name: '»áÒé',path: ''},
-        {name: 'ÒôÆµ',path: ''},
-        {name: '¹Ø¼ü´Ê',path: ''},
-        {name: 'ÈÈ´Ê',path: ''},
+        {name: 'ä¼šè®®',path: ''},
+        {name: 'éŸ³é¢‘',path: ''},
+        {name: 'å…³é”®è¯',path: ''},
+        {name: 'çƒ­è¯',path: ''},
       ]
     };
   },
