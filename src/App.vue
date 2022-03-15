@@ -1,25 +1,30 @@
 <template>
   <div id="app">
-    <Header/>
-    <Sidebar/>,
-    <Footer/>,
-    <router-view/>
+    <Header />
+    <SideBar />
+    <Footer />
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view />
+    <span>aaaaa</span>
   </div>
 </template>
 
 <script>
-import Header from '@/components/Header.vue'
-import Footer from '@/components/Footer.vue'
-import SideBar from '@/components/SideBar.vue'
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import SideBar from "@/components/SideBar";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Header,
     Footer,
     SideBar,
-  }
-}
+  },
+};
 </script>
 
 <style>
