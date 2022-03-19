@@ -1,23 +1,16 @@
 <template>
   <div id="app">
     <Header />
-    <SideBar />
-    <Footer />
     <router-view />
   </div>
 </template>
 
 <script>
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import SideBar from "@/components/SideBar";
-
 export default {
   name: "App",
   components: {
     Header,
-    Footer,
-    SideBar,
   },
 };
 </script>
