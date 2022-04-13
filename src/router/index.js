@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import Meeting from '@/views/Meeting'
+import RegisterOrLogin from '@/views/RegisterOrLogin'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,17 @@ const routes = [{
         name: 'HotWord',
         component: () =>
             import ('../views/HotWord.vue')
+    },
+    {
+        path: '/registerOrLogin',
+        name: 'RegisterOrLogin',
+        component: RegisterOrLogin
+    },
+    {
+        path: '/audioTrans/:audioId',
+        name: 'AudioTrans',
+        component: () =>
+            import ('../views/AudioTrans.vue')
     },
 ]
 

@@ -1,6 +1,7 @@
 const configure = {
     state: {
-        HOST: 'http://localhost:8888',
+        HOST: 'http://localhost:8081',
+        ALiOSSHost: 'https://asr-meeting-audio.oss-cn-shanghai.aliyuncs.com/',
         loginIn: false, // 用户是否登录
     },
     getters: {

@@ -34,12 +34,11 @@
       <el-col :span="8">
         <div class="setting">
           <div v-if="loginIn" class="avator-uname" @click="userClick">
-            <el-avator :src="avator" :size="medium" alt="用户头像" :fit="fit"></el-avator>
+            <el-avatar :src="avator" size="small" alt="用户头像" fit="fill"></el-avatar>
             <span>{{ username }}</span>
           </div>
           <div v-else class="register-login">
-            <span @click="register" class="register">注册</span>
-            <span @click="login" class="login">登录</span>
+            <span @click="registerOrLogin">注册/登录</span>
           </div>
         </div>
       </el-col>
@@ -51,14 +50,19 @@
 import { mapGetters } from "vuex";
 export default {
   name: "Header",
-  data: function () {
+  data() {
     return {
       webName: "智会",
-      activeName: "meeting",
+      activeName:'meeting',
     };
   },
   computed: {
     ...mapGetters(["userId", "avator", "username", "loginIn"]),
+    // activeName(){
+    //   let path=(String)(this.$route.path);
+    //   let tabName=path.substring(1);
+    //   return tabName;
+    // }
   },
   components: {},
   methods: {
@@ -67,14 +71,14 @@ export default {
     },
     tabClick(tab, event) {
       console.log(tab, event);
-      let path = tab.name;
-      this.$router.push({ path: path });
+      let path = tab.name+'';
+      this.$router.push(path);
     },
     userClick() {},
-    register(){
-      this.$router.push('/register')
+    registerOrLogin(){
+      this.$router.push('/registerOrLogin');
     },
-    login(){}
+    
   },
 };
 </script>
@@ -97,12 +101,6 @@ export default {
 }
 .register-login {
   margin-top: 9px;
-  .register {
-    margin-right: 10px;
-    cursor: pointer;
-  }
-  .login{
-    cursor: pointer;
-  }
+  cursor: pointer;
 }
 </style>
